@@ -42,9 +42,18 @@ syn keyword asOperator        new in is as typeof instanceof delete
 
 syn match   asBraces          "[{}]"
 
+" Flex metadata
+syn keyword asMetadataTag     Bindable DefaultProperty Effect Event Exclude IconFile MaxChildren ResourceBundle Style contained
+syn match   asMetadata        "^\s*\[.*" contains=asMetadataTag,asStringDQ,asComment
+
 syn sync fromstart
 syn sync maxlines=300
 
+hi def link asStringDQ        String
+hi def link asStringSQ        String
+hi def link asNumber          Number
+hi def link asRegExp          Special
+hi def link asCommentTodo     Todo
 hi def link asComment         Comment
 hi def link asDirective       Include
 hi def link asAttribute       Define
@@ -56,6 +65,7 @@ hi def link asIdentifier      Identifier
 hi def link asConstant        Constant
 hi def link asOperator        Operator
 hi def link asBraces          Function
+hi def link asMetadataTag     PreProc
 
 let b:current_syntax = "actionscript"
 
