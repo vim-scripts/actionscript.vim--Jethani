@@ -1,8 +1,8 @@
 " Vim syntax file
 " Language:     ActionScript
 " Maintainer:   Manish Jethani <manish.jethani@gmail.com>
-" URL:          http://geocities.com/manish_jethani/actionscript.vim
-" Last Change:  2006 June 26
+" URL:          http://manishjethani.com/code/actionscript.vim
+" Last Change:  2011 July 2
 
 if exists("b:current_syntax")
   finish
@@ -29,11 +29,11 @@ syn match   asDefinition        "\<function\(\s\+[gs]et\)\?\>"
 
 syn keyword asGlobal          NaN Infinity undefined eval parseInt parseFloat isNaN isFinite decodeURI decodeURIComponent encodeURI encodeURIComponent
 
-syn keyword asType            Object Function Array String Boolean Number Date Error XML
+syn keyword asType            Object Function Array String Boolean Number Date Error RegExp XML
 syn keyword asType            int uint void *
 
-syn keyword asStatement       if else do while for with switch case default continue break return throw try catch finally
-syn match   asStatement       "\<for\s\+each\>"
+syn keyword asStatement       if else do while with switch case default continue break return throw try catch finally
+syn match   asStatement       "\<for\(\s\+each\)\?\>"
 
 syn keyword asIdentifier      super this
 
